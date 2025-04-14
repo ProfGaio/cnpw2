@@ -14,7 +14,7 @@ A primeira atividade registrada no repositório:
 ### Aula 5
 
 
-### Aula 6
+### Aula 6 e 7
 Pesquisa sobre a AWS e serviço de computação EC2. Definição de instâncias. Atividade de pesquisa.
 
 #### Lembrança dos comandos git a serem executados após criar o repositório no GitHub
@@ -50,3 +50,67 @@ Pesquisa sobre a AWS e serviço de computação EC2. Definição de instâncias.
     ```
     git push origin main
     ```
+
+### Aula 8
+
+Criando uma instância EC2 com AWS CLI e LocalStack. A LocalStack é um emulador de nuvem AWS, que permite provisionar e gerenciar serviços da AWS na máquina local como se estivesse utilizando realmente a AWS. Nesta aula iremos aprender como utilizar o serviço EC2, criando uma instância.
+
+#### VISÃO GERAL E OBJETIVO
+Aprender a criar e gerenciar uma instância EC2 localmente utilizando a AWS Command Line Interface (CLI) e o LocalStack no sistema operacional Windows 10.
+
+#### PRÉ-REQUISITOS
+* Docker em Execução no SO: É necessário executar o Docker Desktop.
+* LocalStack Instalado e Rodando: É necessário adicionar a sua pasta no PATH do SO. Certifique-se de que o LocalStack esteja iniciado antes de prosseguir digitando o comando: localstack start PowerShell.
+* AWS CLI Instalada: Verifique a instalação abrindo executando no PowerShell: aws --version.
+* AWS CLI Configurada para LocalStack: Escolha um método para configurar a AWS CLI para se comunicar com o LocalStack (primeiro passo da atividade abaixo).
+
+#### ATIVIDADE
+
+#### Configurando um Perfil Específico
+Edite o arquivo C:\Users\<SeuNomeDeUsuário>\.aws\config e adicione:
+```
+[profile localstack]
+region = us-east-1
+output = json
+endpoint_url = http://localhost:4566
+```
+
+Edite o arquivo C:\Users\<SeuNomeDeUsuário>\.aws\credentials e adicione: 
+``` 
+[localstack]
+aws_access_key_id = etec
+aws_secret_access_key = etec 
+```
+Para usar este perfil, adicione --profile localstack aos comandos da AWS CLI.
+
+#### Interagindo com o Serviço EC2 no LocalStack
+Verificar o Serviço EC2: Executando no PowerShell:
+```
+aws ec2 describe-regions --profile localstack
+```
+Deverá aparecer uma listagem de arquivo no formato JSON.
+
+#### Criar a Instância EC2
+Execute o comando (ajuste conforme sua configuração): 
+```
+aws --profile localstack ec2 run-instances `
+	--image-id ami-00000000000000000 `
+	--instance-type t2.micro --count 1
+```
+Analise a saída JSON e anote o InstanceId da instância criada.
+
+
+#### Listar as Instâncias EC2 em Execução
+
+Execute o comando:
+```
+aws ec2 describe-instances --profile localstack
+```
+Verifique a saída para encontrar sua instância pelo InstanceId e confirme que o State é running.
+
+Outras operações estão no arquivo pdf na pasta da aula.
+
+### Aula 9
+
+
+
