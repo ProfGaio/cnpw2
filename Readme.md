@@ -112,5 +112,11 @@ Outras operações estão no arquivo pdf na pasta da aula.
 
 ### Aula 9
 
+### Aula 10 e 11
+1) Criar scritps de PowerShell para automatizar a execução da LocalStack e criar um bucket com imagens de imóveis para locação ou venda.
+2) Enviar (copiar) imagens de imóveis organizadas em pastas para o bucket.
+3) Criar uma página web com um portifólio de imagens de imóveis com referência às imagens gravadas no bucket.
+4) Faltou terminar... Ainda utilizaremos a aula 12. Lembrar de comentar sobre segurança de acesso ao bucket.
+
 
 
