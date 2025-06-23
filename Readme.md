@@ -67,7 +67,7 @@ Aprender a criar e gerenciar uma instância EC2 localmente utilizando a AWS Comm
 #### ATIVIDADE
 
 #### Configurando um Perfil Específico
-Edite o arquivo C:\Users\\<SeuNomeDeUsuário>\.aws\config e adicione:
+Edite o arquivo C:\Users\\<SeuNomeDeUsuário>\\.aws\config e adicione:
 ```
 [profile localstack]
 region = us-east-1
@@ -75,7 +75,7 @@ output = json
 endpoint_url = http://localhost:4566
 ```
 
-Edite o arquivo C:\Users\\<SeuNomeDeUsuário>\.aws\credentials e adicione: 
+Edite o arquivo C:\Users\\<SeuNomeDeUsuário>\\.aws\credentials e adicione: 
 ``` 
 [localstack]
 aws_access_key_id = etec
