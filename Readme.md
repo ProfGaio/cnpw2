@@ -118,6 +118,6 @@ Outras operações estão no arquivo pdf na pasta da aula.
 3) Criar uma página web com um portifólio de imagens de imóveis com referência às imagens gravadas no bucket.
 4) Faltou terminar... Ainda utilizaremos a aula 12. Lembrar de comentar sobre segurança de acesso ao bucket.
 
-### Aula 19 no retorno do recesso em 28/09 (continua na aula 20)
+### Aula 19 no retorno do recesso em 28/07 (continua na aula 20)
 Foi solicitada uma atividade de pesquisa para conhecer o papel do Docker Compose e criamos uma pasta de projeto de Mural Online com PHP e Bootstrap acessando dados em BD AWS Dynamodb simulado com LocalStack. Adicionamos o docker-compose.yml para "levantar" o serviço da LocalStack.
 
