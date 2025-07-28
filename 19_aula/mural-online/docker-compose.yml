@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack_main
+    ports:
+    - "127.0.0.1:4566:4566" # Porta principal para todos os serviços
+    - "127.0.0.1:4510-4559:4510-4559" # Portas legadas (opcional)
+    environment:
+    - SERVICES=dynamodb # Inicia apenas o serviço DynamoDB para economizar recursos
+    - DEBUG=0
+    - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+    - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+    - "/var/run/docker.sock:/var/run/docker.sock"
