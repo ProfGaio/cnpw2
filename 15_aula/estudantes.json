@@ -1,0 +1,31 @@
+{
+  "Alunos": [
+    {
+      "PutRequest": {
+        "Item": {
+          "RA": { "S": "10001" },
+          "Nome": { "S": "Ana Costa" },
+          "Curso": { "S": "Informática" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "RA": { "S": "10002" },
+          "Nome": { "S": "Bruno Souza" },
+          "Curso": { "S": "Redes" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "RA": { "S": "10003" },
+          "Nome": { "S": "Carla Dias" },
+          "Curso": { "S": "Eletrônica" }
+        }
+      }
+    }
+  ]
+}
